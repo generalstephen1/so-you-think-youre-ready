@@ -1,0 +1,35 @@
+
+@import "ember-bootstrap/bootstrap";
+
+
+a {
+    text-decoration: none;
+    color: #353535;
+    &:hover {
+        color: #555555;
+    }
+}
+
+.side-bar {
+    background-color: grey;
+    color: white;
+    min-height: 100vh;
+
+    &__title {
+        list-style: none;
+        font-size: 20pt;
+    }
+    &__nav {
+
+    }
+    &__nav-item {
+
+        a {
+            color: white;
+        }
+    }
+}
+
+.section-content {
+    background-color: #dadada
+}

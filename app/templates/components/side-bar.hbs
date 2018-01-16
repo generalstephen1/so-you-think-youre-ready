@@ -1,0 +1,14 @@
+
+<ul class="side-bar__nav">
+    <li class="side-bar__title">
+        <h2>{{title}}</h2>
+    </li>
+
+    {{#each points as |point index|}}
+    <li class="side-bar__nav-item">
+        <a href="#" {{action "loadPoint" index}}>
+            {{point.title}}
+        </a>
+    </li>
+    {{/each}}
+</ul>

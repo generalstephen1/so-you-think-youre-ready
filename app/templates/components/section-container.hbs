@@ -1,0 +1,15 @@
+
+<div class="section-container row">
+    <div class="side-bar col-4">
+        {{side-bar
+            title=model.title
+            points=model.points
+            loadPoint=(action "loadPoint")
+        }}
+    </div>
+
+    <div class="section-content col-8">
+        <p>watch this space</p>
+        {{section-content}}
+    </div>
+</div>
