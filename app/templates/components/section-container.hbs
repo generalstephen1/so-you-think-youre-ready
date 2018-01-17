@@ -2,14 +2,13 @@
 <div class="section-container row">
     <div class="side-bar col-4">
         {{side-bar
-            title=model.title
+            title=model.shortTitle
             points=model.points
             loadPoint=(action "loadPoint")
         }}
     </div>
 
     <div class="section-content col-8">
-        <p>watch this space</p>
-        {{section-content}}
+        {{content-type model.points currentContentID}}
     </div>
 </div>

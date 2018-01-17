@@ -6,9 +6,16 @@
 
     {{#each points as |point index|}}
     <li class="side-bar__nav-item">
-        <a href="#" {{action "loadPoint" index}}>
-            {{point.title}}
+        {{#if point.url}}
+        <a href={{point.url}} target="_blank">
+            {{point.shortTitle}}<span class='glyphicon glyphicon-share-alt'>*</span>
         </a>
+        {{else}}
+        <a href="#" target="_blank" {{action "loadPoint" index}}>
+            {{point.shortTitle}}
+        </a>
+        {{/if}}
+
     </li>
     {{/each}}
 </ul>

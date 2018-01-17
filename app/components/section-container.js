@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    currentContentID: 0,
     actions: {
         loadPoint(whatPoint) {
-          alert(whatPoint)
-
+          this.set('currentContentID', whatPoint)
         }
       }
 });

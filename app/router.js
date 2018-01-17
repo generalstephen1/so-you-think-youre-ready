@@ -22,6 +22,7 @@ Router.map(function() {
   this.route('general-js', { path: 'general-js' }, function(){
     this.route('general-js', { path: '/:point' });
   });
+  this.route('tooling');
 });
 
 export default Router;
