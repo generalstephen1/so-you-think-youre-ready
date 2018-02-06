@@ -1,0 +1,14 @@
+{{#if block.title}}
+<h4 class="list-component__title">{{block.title}}</h4>
+{{/if}}
+<ul  class="list-component__list">
+{{#each block.data as |listItem|}}
+    <li class="list-component__item">
+        {{#if listItem.html}}
+        {{listItem.content}}
+        {{else}}
+        {{{listItem}}}
+        {{/if}}
+    </li>
+{{/each}}
+</ul>

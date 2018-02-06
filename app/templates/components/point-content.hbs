@@ -1,0 +1,13 @@
+
+<h2>{{point.title}}</h2>
+{{#if point.content}}
+    {{#each point.content as |block|}}
+        {{#if block.type }}
+        {{component (concat 'primitive/' block.type '-component') block=block}}
+        {{else}}
+        {{component (concat 'primitive/text-component') block=block}}
+        {{/if}}
+     {{/each}}
+{{else}}
+<p>Still working on this one!</p>
+{{/if}}
