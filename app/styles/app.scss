@@ -1,6 +1,7 @@
 
 @import "ember-bootstrap/bootstrap";
 
+$default-margin: 20px;
 
 a {
     text-decoration: none;
@@ -10,10 +11,15 @@ a {
     }
 }
 
+.app-container {
+    overflow: hidden;
+}
+
 .side-bar {
     background-color: grey;
     color: white;
     min-height: 100vh;
+    padding-top: $default-margin;
 
     &__title {
         list-style: none;
@@ -31,5 +37,21 @@ a {
 }
 
 .section-content {
-    background-color: #dadada
+    background-color: #dadada;
+    padding-top: $default-margin;
+}
+
+.code-snippet{
+    margin: $default-margin;
+    &__code {
+        padding: $default-margin/2;
+    }
+}
+
+.text-component {
+    &__divider {
+        position: relative;
+        padding: 0px 25% 0px 20px;
+        border-bottom: 1px solid black;
+    }
 }

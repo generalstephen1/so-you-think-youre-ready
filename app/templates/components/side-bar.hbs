@@ -8,14 +8,13 @@
     <li class="side-bar__nav-item">
         {{#if point.url}}
         <a href={{point.url}} target="_blank">
-            {{point.shortTitle}}<span class='glyphicon glyphicon-share-alt'>*</span>
+            {{point.shortTitle}} 🔗
         </a>
         {{else}}
         <a href="#" target="_blank" {{action "loadPoint" index}}>
-            {{point.shortTitle}}
+            {{if point.content '' '{*} '}}{{point.shortTitle}}
         </a>
         {{/if}}
-
     </li>
     {{/each}}
 </ul>
