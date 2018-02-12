@@ -1,1 +1,13 @@
-{{section-container model=model}}
+
+<div class="section-container row">
+    <div class="side-bar col-4">
+        {{side-bar
+            title=title
+            points=model.data
+        }}
+    </div>
+
+    <div class="section-content col-8">
+        {{point-content content=model.activeContent}}
+    </div>
+</div>

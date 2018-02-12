@@ -5,16 +5,16 @@
     </li>
 
     {{#each points as |point index|}}
-    <li class="side-bar__nav-item">
-        {{#if point.url}}
-        <a href={{point.url}} target="_blank">
-            {{point.shortTitle}} 🔗
-        </a>
-        {{else}}
-        <a href="#" target="_blank" {{action "loadPoint" index}}>
-            {{if point.content '' '{*} '}}{{point.shortTitle}}
-        </a>
-        {{/if}}
-    </li>
+    {{#if point.content}}
+        <li class="side-bar__nav-item">
+            {{#if point.url}}
+            <a href={{point.url}} target="_blank">
+                {{point.shortTitle}} 🔗
+            </a>
+            {{else}}
+            {{link-to point.shortTitle (concat point.cat '.item') point.slug }}
+            {{/if}}
+        </li>
+    {{/if}}
     {{/each}}
 </ul>

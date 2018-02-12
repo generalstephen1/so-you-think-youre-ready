@@ -7,22 +7,24 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('ember', function(){
+    this.route('item', { path: '/:slug' });
+  });
+  this.route('testing', function(){
+    this.route('item', { path: '/:slug' });
+  });
+  this.route('web-dev', function(){
+    this.route('item', { path: '/:slug' });
+  });
   this.route('ig-knowledge', function(){
-    this.route('ig-knowledge', { path: '/:point' })
+    this.route('item', { path: '/:slug' });
   });
-  this.route('ember', { path: 'ember' }, function(){
-    this.route('ember', { path: '/:point' });
+  this.route('general-js', function(){
+    this.route('item', { path: '/:slug' });
   });
-  this.route('testing', { path: 'testing' }, function(){
-    this.route('testing', { path: '/:point' });
+  this.route('tooling', function(){
+    this.route('item', { path: '/:slug' });
   });
-  this.route('web-dev', { path: 'web-dev' }, function(){
-    this.route('web-dev', { path: '/:point' });
-  });
-  this.route('general-js', { path: 'general-js' }, function(){
-    this.route('general-js', { path: '/:point' });
-  });
-  this.route('tooling');
 });
 
 export default Router;

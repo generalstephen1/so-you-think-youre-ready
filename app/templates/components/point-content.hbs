@@ -1,7 +1,8 @@
 
-<h2>{{point.title}}</h2>
-{{#if point.content}}
-    {{#each point.content as |block|}}
+<h2>{{content.title}}</h2>
+
+{{#if content}}
+    {{#each content.content as |block|}}
         {{#if block.type }}
         {{component (concat 'primitive/' block.type '-component') block=block}}
         {{else}}
