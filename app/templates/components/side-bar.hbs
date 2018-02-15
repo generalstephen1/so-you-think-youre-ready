@@ -9,7 +9,11 @@
                 {{point.shortTitle}} 🔗
             </a>
             {{else}}
-            {{link-to point.shortTitle (concat point.cat '.item') point.slug class="mdl-button mdl-js-button mdl-button--primary" }}
+            {{link-to
+                point.shortTitle
+                (concat point.cat '.item')
+                point.slug class="mdl-button mdl-js-button mdl-button--primary"
+                }}
             {{/if}}
         {{/if}}
         {{/each}}
