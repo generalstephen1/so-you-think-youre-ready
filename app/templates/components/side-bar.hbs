@@ -3,19 +3,21 @@
         <span class="side-bar__title">{{title}}</span>
 
         {{#each points as |point index|}}
-        {{#if point.content}}
             {{#if point.url}}
-            <a href={{point.url}} target="_blank" class="mdl-button mdl-js-button mdl-button--primary">
-                {{point.shortTitle}} 🔗
-            </a>
+                <a href={{point.url}} target="_blank" class="mdl-button mdl-js-button mdl-button--primary">
+                    {{point.shortTitle}} 🔗
+                </a>
+            {{else if point.content}}
+                {{link-to
+                    point.shortTitle
+                    (concat point.cat '.item')
+                    point.slug
+                    class="mdl-button mdl-js-button mdl-button--primary"}}
             {{else}}
-            {{link-to
-                point.shortTitle
-                (concat point.cat '.item')
-                point.slug class="mdl-button mdl-js-button mdl-button--primary"
-                }}
+                <span class="mdl-button mdl-js-button mdl-button--disabled">
+                    {{point.shortTitle}}
+                </span>
             {{/if}}
-        {{/if}}
         {{/each}}
     </nav>
 </div>

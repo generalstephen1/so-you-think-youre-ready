@@ -20,6 +20,8 @@ export default Ember.Route.extend({
             {
                 'shortTitle': 'URL mapping decoupled folder structure',
                 'title': "Demonstrate how the URL can map to UI hierarchies built from views in a decoupled folder structure",
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         'data': ['Ember URL mapping is not tied to any particular route, through the use of the --path flag you can assign a route to land on any page you want '],
@@ -53,14 +55,20 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Route lifecycle hooks',
                 'title': "List the main lifecycle hooks available in Routes and describe appropriate use cases for each",
+                'level': 2,
+                'approved': true,
                 'url': 'https://github.com/generalstephen1/ember-docs/blob/master/Route%20Lifecycle%20Hooks.md',
             }, {
                 'shortTitle': 'Component lifecycle hooks',
                 'title': "List the Ember component lifecycle hooks and describe the conditions that cause them to trigger",
+                'level': 2,
+                'approved': true,
                 'url': 'https://github.com/generalstephen1/ember-docs/blob/master/Component%20Lifecycle%20Hooks.md',
             }, {
                 'shortTitle': 'Embers Resolver',
                 'title': "Explain the purpose of Ember's Resolver and how it supports convention over configuration",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {'data': ['Embers resolver the name of its mechanism of looking up the various parts of your application by utilising it\'s naming conventions to easily parse project structure']},
                     {
@@ -75,6 +83,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Handlebars helpers',
                 'title': "Demonstrate appropriate use of the core Handlebars helpers",
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         title: '#each',
@@ -147,6 +157,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'yielding params in a component',
                 'title': "Demonstrate how yielding block params can improve the composability of a component",
+                'level': 1,
+                'approved': false,
                 'content': [
                     { 'data': ['The {{yield}} block within a handlebars component will replace itself with anything added between its open and closing tags if expressed as a block'], },
                     {
@@ -176,10 +188,14 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Popular Ember Addons',
                 'title': "List popular Ember Addons and describe their function",
+                'level': 1,
+                'approved': false,
                 'content': null,
             }, {
                 'shortTitle': 'Runloop',
                 'title': "Explain the advantages of Ember's Runloop over a basic pub/sub event emitter patter",
+                'level': 2,
+                'approved': true,
                 'content': [{
                     'data': [
                         'Ember\'s run-loop is a clever optimization of Ember that batches and orders pieces of work to be triggered at the optimal time and stop repetitive pieces of work.',
@@ -190,6 +206,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Computed properties vs observers',
                 'title': "Explain the benefits of computed properties over observers",
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         'data': [
@@ -205,10 +223,14 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Addons',
                 'title': "Demonstrate how to package appropriate reusable code as an Ember Addon",
+                'level': 1,
+                'approved': false,
                 'content': null,
             }, {
                 'shortTitle': 'ember-cli build pipeline',
                 'title': "Demonstrate how to leverage the ember-cli build pipeline to affect the binary output",
+                'level': 1,
+                'approved': false,
                 'content': null,
             }]
     }
