@@ -1,13 +1,14 @@
+{{primary-nav navData=model.navData}}
 
-<div class="section-container row">
-    <div class="side-bar col-4">
+<div class="content mdl-grid">
+    <div class="mdl-cell mdl-cell--3-col">
         {{side-bar
             title=title
             points=model.data
         }}
     </div>
-
-    <div class="section-content col-8">
+    <div class="mdl-cell mdl-cell--9-col">
         {{point-content content=model.activeContent}}
     </div>
+    {{outlet}}
 </div>

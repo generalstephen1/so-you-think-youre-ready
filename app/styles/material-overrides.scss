@@ -1,0 +1,48 @@
+@import 'material-design-lite';
+
+div.mdl-layout,
+header.mdl-layout {
+    &__header,
+    &__header-row {
+        min-height: 40px;
+        height: 40px;
+        overflow: hidden;
+        box-shadow: none;
+    }
+    &__header-row {
+        padding: 0 40px;
+    }
+    &__drawer.is-visible {
+        position: relative;
+        display: inline-block;
+        transform: none;
+        width: 100%;
+    }
+}
+
+.side-bar__nav {
+    .mdl-button--primary.mdl-button--primary {
+        width: 90%;
+        padding: 0px 5%;
+        text-align: left;
+        font-size: 13px;
+
+        &:after {
+            border-bottom: 1px solid #d2d2d2;
+            width: 90%;
+            margin-left: 5%;
+            content: ' ';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+.mdl-grid {
+    margin: 0;
+}
+
+.mdl-tabs__tab.mdl-tabs__tab--active {
+    border-bottom: 3px solid #ff5722;
+    color: #ff5722;
+}

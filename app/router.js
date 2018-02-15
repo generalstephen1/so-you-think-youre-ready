@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('ember', function(){
-    this.route('item', { path: '/:slug' });
+    this.route('item', { path: '/:slug' }, function() {
+      this.route('comments', {resetNamspace: true});
+    });
   });
   this.route('testing', function(){
     this.route('item', { path: '/:slug' });
@@ -24,6 +26,11 @@ Router.map(function() {
   });
   this.route('tooling', function(){
     this.route('item', { path: '/:slug' });
+  });
+
+
+  this.route('404', {
+    path: '*'
   });
 });
 

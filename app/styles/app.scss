@@ -1,57 +1,31 @@
+@import 'material-overrides';
 
-@import "ember-bootstrap/bootstrap";
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+}
 
-$default-margin: 20px;
+.splash-page {
+    margin: 20px 50px;
+    text-align: center;
+}
 
-a {
+.mdl-layout-title.header__title {
+    color: #f2f2f2;
     text-decoration: none;
-    color: #353535;
-    &:hover {
-        color: #555555;
-    }
+    font-size: 60pt;
 }
 
-.app-container {
-    overflow: hidden;
+.point-content__title {
+    margin-top: 0;
+    font-size: 30px;
 }
 
-.side-bar {
-    background-color: grey;
-    color: white;
-    min-height: 100vh;
-    padding-top: $default-margin;
-
-    &__title {
-        list-style: none;
-        font-size: 20pt;
-    }
-    &__nav {
-
-    }
-    &__nav-item {
-
-        a {
-            color: white;
-        }
-    }
-}
-
-.section-content {
-    background-color: #dadada;
-    padding-top: $default-margin;
-}
-
-.code-snippet{
-    margin: $default-margin;
-    &__code {
-        padding: $default-margin/2;
-    }
-}
-
-.text-component {
-    &__divider {
-        position: relative;
-        padding: 0px 25% 0px 20px;
-        border-bottom: 1px solid black;
-    }
+.code-snippet {
+    display: inline-block;
+    background-color: rgba(0,0,0,.06);
+    border-radius: 3px;
+    overflow-x: scroll;
+    width: 80%;
+    padding: 0 20px;
 }

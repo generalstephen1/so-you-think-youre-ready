@@ -1,20 +1,17 @@
+<div class="mdl-layout__drawer is-visible">
+    <nav class="side-bar__nav">
+        <span class="side-bar__title">{{title}}</span>
 
-<ul class="side-bar__nav">
-    <li class="side-bar__title">
-        <h2>{{title}}</h2>
-    </li>
-
-    {{#each points as |point index|}}
-    {{#if point.content}}
-        <li class="side-bar__nav-item">
+        {{#each points as |point index|}}
+        {{#if point.content}}
             {{#if point.url}}
-            <a href={{point.url}} target="_blank">
+            <a href={{point.url}} target="_blank" class="mdl-button mdl-js-button mdl-button--primary">
                 {{point.shortTitle}} 🔗
             </a>
             {{else}}
-            {{link-to point.shortTitle (concat point.cat '.item') point.slug }}
+            {{link-to point.shortTitle (concat point.cat '.item') point.slug class="mdl-button mdl-js-button mdl-button--primary" }}
             {{/if}}
-        </li>
-    {{/if}}
-    {{/each}}
-</ul>
+        {{/if}}
+        {{/each}}
+    </nav>
+</div>

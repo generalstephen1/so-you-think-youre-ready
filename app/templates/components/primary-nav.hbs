@@ -1,31 +1,19 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <a class="navbar-brand" href="#">{{ link-to 'Levelling Up!' 'index' }}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">{{ link-to 'IG' 'ig-knowledge.item' 'asset-classes-and-markets'}}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">{{ link-to 'Ember' 'ember.item' 'url-mapping-decoupled-folder-structure'}}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">{{ link-to 'Testing' 'testing.item' 'unit'}}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">{{ link-to 'Web' 'web-dev.item' 'well-structured-HTML' }}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">{{ link-to 'JS' 'general-js.item' 'inheritance'}}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">{{ link-to 'Tooling' 'tooling.item' 'cloneforkcreate'}}</a>
-        </li>
-    </ul>
-    <span class="navbar-text">
-      Steve Utting
-    </span>
-  </div>
-</nav>
+
+<div class="mdl-layout mdl-layout--fixed-header">
+    <header class="docs-layout-header mdl-layout__header is-casting-shadow">
+        <div class="mdl-layout__header-row">
+            {{ link-to 'leVelUP' 'index' class="mdl-layout-title header__title" }}
+            <div class="mdl-layout-spacer"></div>
+            <span class="navbar-text">
+                Steve Utting
+            </span>
+        </div>
+    </header>
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+            {{#each navData as |navLink|}}
+                {{ link-to navLink.FN (concat navLink.route '.item') navLink.slug class=navLink.classes }}
+            {{/each}}
+        </div>
+    </div>
+</div>

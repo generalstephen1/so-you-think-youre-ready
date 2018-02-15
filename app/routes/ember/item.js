@@ -46,6 +46,8 @@ export default Ember.Route.extend({
                         'data': [
                             '$ ember generate route aRouteGroup/myRoute3 --path="myRoute1:someID"',
                         ]
+                    }, {
+                        'data': ['Alternatatively but using the "resetNameSpace" flag you can completely sever the route from the folder structure to be utilised as a nested route in any other route.'],
                     }
                 ],
             }, {

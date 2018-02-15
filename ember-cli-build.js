@@ -5,17 +5,14 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    'ember-bootstrap': {
-      'bootstrapVersion': 4,
-      'importBootstrapFont': false,
-      'importBootstrapCSS': false
-    },
     babel: {
       sourceMaps: 'inline'
     },
   });
 
-  // Use `app.import` to add additional libraries to the generated
+  app.import(app.bowerDirectory + '/material-design-lite/material.css');
+
+  // Use `app.import` to add additional librarie  zs to the generated
   // output files.
   //
   // If you need to use different assets in different
