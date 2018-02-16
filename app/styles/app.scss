@@ -16,6 +16,44 @@ body {
     font-size: 60pt;
 }
 
+.side-bar {
+    &__item {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        span {
+            margin: 0;
+        }
+
+        &:before {
+            position: absolute;
+            top: 12px;
+            font-size: 8px;
+        }
+
+        &--level-1:hover:before {
+            content: '⭐';
+        }
+        &--level-2:hover:before {
+            content: '⭐⭐';
+        }
+        &--level-3:before {
+            content: '⭐⭐⭐';
+        }
+        &--level-4:before {
+            content: '⭐⭐⭐⭐';
+        }
+        &--level-5:before {
+            content: '⭐⭐⭐⭐⭐';
+        }
+    }
+    &__approval {
+        position: absolute;
+        top: -7px;
+        font-size: 12px;
+        left: 5px;
+    }
+}
+
 .point-content__title {
     margin-top: 0;
     font-size: 30px;

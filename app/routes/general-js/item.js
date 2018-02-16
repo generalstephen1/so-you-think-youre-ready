@@ -20,6 +20,8 @@ export default Ember.Route.extend({
             {
                 'shortTitle': "Inheritance",
                 'title': "Demonstrate the value of inheritance",
+                'level': 2,
+                'approved': false,
                 'content': [
                     { 'data': [
                         'Inheritance in Javascript can be a matter for argument among developers.',
@@ -42,6 +44,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Scopes",
                 'title': "List 3 available scopes in Javascript and demonstrate their differences",
+                'level': 3,
+                'approved': false,
                 'content': [{
                     'data': ['There are three scopes in javascript world. Global, Local and Block scopes.'],
                 }, {
@@ -75,6 +79,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "JS in 6 characters",
                 'title': "How is it possible that any Javascript program be represented using combinations of just 6 characters?",
+                'level': 2,
+                'approved': false,
                 'content': [{
                     'data': ['This is a fun example of how we can take advantage of JS "helper" functions and end up writing ' +
                         'code with the characters "[]()=-"'],
@@ -104,6 +110,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Primitive data types",
                 'title': "List Javascript's primitive data types and describe their use",
+                'level': 3,
+                'approved': false,
                 'content': [{
                     'title': 'Boolean',
                     'data': ['A strictly black and white value that can only be True or False'],
@@ -130,6 +138,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Modify arrays and Immutable",
                 'title': "Demonstrate how to modify an array and explain the pros/cons of an immutable approach",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {'data': [
                         'Arrays are by definition index-based systems and as such the index is the primary method used to modify them, take the below example',
@@ -185,18 +195,26 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Traditional map, filter and reduce",
                 'title': "Demonstrate how to write map, filter and reduce using traditional loops e.g. for and while",
+                'level': 2,
+                'approved': false,
                 'content': '',
             }, {
                 'shortTitle': "Inappropriate if else",
                 'title': "Demonstrate a scenario where an 'if else' block is inappropriate and illustrate an alternative ",
+                'level': 2,
+                'approved': false,
                 'content': '',
             }, {
                 'shortTitle': "Anonymous function",
                 'title': "What is an 'anonymous function'?",
+                'level': 2,
+                'approved': false,
                 'content': '',
             }, {
                 'shortTitle': "Arrow functions",
                 'title': "Why were arrow functions introduced to javascript?",
+                'level': 2,
+                'approved': false,
                 'content': [{
                     'data': ['Arrow functions have two main advances compared to their defined function counterparts',
                         '1) Shorter syntax, it is quicker to write ()=>{} than function(){}, and',
@@ -205,10 +223,14 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Improper Closures",
                 'title': "Demonstrate how improper use of closures can cause memory leaks",
+                'level': 1,
+                'approved': false,
                 'content': '',
             }, {
                 'shortTitle': "RegExp",
                 'title': "Demonstrate a scenario in which using a RegExp would be appropriate ",
+                'level': 2,
+                'approved': true,
                 'content': [
                     {'data': ['Regexes are patterns for optimal parsing of strings, as such any complex string of which you would like to extract a value that obeys some ' +
                              'rules is a likely reason to use a Regex.']},
@@ -225,10 +247,14 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Prototype",
                 'title': "Why is it a bad idea to assign objects as prototype properties?",
+                'level': 1,
+                'approved': false,
                 'content': '',
             }, {
                 'shortTitle': "Own vs prototype properties",
                 'title': "Explain the difference between own properties vs prototype properties",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {'data': ['Own properties are properties that belong to the instance of a class whereas a prototype property is somthing that is on the class itself and will therefore ' +
                              'affect all instances of that class.']}
@@ -236,12 +262,16 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Multiple inheritance",
                 'title': "Demonstrate how to achieve multiple inheritance in Javascript",
+                'level': 1,
+                'approved': false,
                 'content': [
                     {'data': ['#TODO look up proxy objects for ES6 multiple inheritance, can also be hacked together with mixins']}
                 ],
             }, {
                 'shortTitle': "DOM",
                 'title': "Explain the purpose of the DOM and its APIs",
+                'level': 3,
+                'approved': false,
                 'content': [
                     {'data': [
                         'The DOM (Document Object Model) is the point where scripts and webpages meet and are interpreted by a browser.',
@@ -262,6 +292,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Event capturing vs bubbling",
                 'title': "What is the difference between event capturing and event bubbling? ",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {'data': [
                         'By default when (almost) any event happens on an element it will trigger the handlers first on that element',
@@ -281,6 +313,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "AJAX",
                 'title': "What is AJAX and why is it important that it is asynchronous?",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {'data': [
                         'AJAX stands for Asynchronous Javascript and XML and is an XMLHttpRequest sent by the browser to communicate with a server.',
@@ -291,6 +325,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Data structures in JSON",
                 'title': "Demonstrate how to express a variety of data structures in JSON",
+                'level': 3,
+                'approved': false,
                 'content': [{
                     data: [
                         'Javascript Object Notation or JSON is a strict, object oriented method for displaying complex data through simple rules',
@@ -318,6 +354,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Singleton",
                 'title': "What is a singleton and when might you use one?",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {data: [
                             'A singleton is an object in an application that there is ony one of (by design). All references to the singleton reference a single instance.',
@@ -335,6 +373,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Factory",
                 'title': "What is a Factory and when might you use one?",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {
                         data: [
@@ -347,10 +387,14 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Promises",
                 'title': "Why were Promises introduced to Javascript?",
+                'level': 2,
+                'approved': false,
                 'content': '',
             }, {
                 'shortTitle': "Epoch time",
                 'title': "Why might you want to represent a date as the number of milliseconds from midnight on the 1st January 1970? ",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {data: ['Epoch, or Unix time is a standardised measurement primarily for programming that is handy as it does not obey any particular timezone and as such can be taken as ' +
                             'a single point of truth for dates and times as it can then be converted into any time-system required.']}
@@ -358,6 +402,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': "Threading",
                 'title': "Why does setTimeout(fn, 0) not immediately execute?",
+                'level': 2,
+                'approved': false,
                 'content': [
                     {
                         data: 'When you use setTimeout it immediately removes the block of code from the current processing thread. As JS is a single-threaded language it will continue with everything ' +

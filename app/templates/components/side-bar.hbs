@@ -4,15 +4,22 @@
 
         {{#each points as |point index|}}
             {{#if point.url}}
-                <a href={{point.url}} target="_blank" class="mdl-button mdl-js-button mdl-button--primary">
+                <a href={{point.url}} target="_blank" class={{concat "mdl-button mdl-js-button mdl-button--primary side-bar__item side-bar__item--level-" point.level}}>
                     {{point.shortTitle}} 🔗
+                    {{#if point.approved}}
+                        <span class="side-bar__approval">✓</span>
+                    {{/if}}
                 </a>
             {{else if point.content}}
-                {{link-to
-                    point.shortTitle
+                {{#link-to
                     (concat point.cat '.item')
                     point.slug
-                    class="mdl-button mdl-js-button mdl-button--primary"}}
+                    class=(concat "mdl-button mdl-js-button mdl-button--primary side-bar__item side-bar__item--level-" point.level)}}
+                    {{#if point.approved}}
+                        <span class="side-bar__approval">✓</span>
+                    {{/if}}
+                    {{point.shortTitle}}
+                {{/link-to}}
             {{else}}
                 <span class="mdl-button mdl-js-button mdl-button--disabled">
                     {{point.shortTitle}}

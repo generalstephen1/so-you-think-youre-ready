@@ -20,6 +20,8 @@ export default Ember.Route.extend({
             {
                 'shortTitle': 'Well structured HTML',
                 'title': "Describe the qualities of a well structured HTML document",
+                'level': 3,
+                'approved': false,
                 'content': [{
                     'data': ['HTML is the skeleton on which we hang all the other parts of our web developer code.']
                 }, {
@@ -57,6 +59,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Accessibility',
                 'title': "List a number of common accessibility features of HTML",
+                'level': 2,
+                'approved': false,
                 'content': [{
                     'type': 'list',
                     'data': [
@@ -69,10 +73,14 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'CSS',
                 'title': "Demonstrate a thorough knowledge of using CSS to apply styles and layout to HTML",
+                'level': 3,
+                'approved': false,
                 'content': null,
             }, {
                 'shortTitle': 'Flexbox',
                 'title': "Use CSS Flexbox to solve a variety of common layout problems without JavaScript",
+                'level': 3,
+                'approved': false,
                 'content': [{
                     'type': 'list',
                     'data': [
@@ -82,10 +90,14 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'CSS pre-processor',
                 'title': "Explain the benefits of using a CSS pre-processor",
+                'level': 3,
+                'approved': false,
                 'content': null,
             }, {
                 'shortTitle': 'BEM',
                 'title': "Demonstrate advantages of using BEM to structure CSS",
+                'level': 2,
+                'approved': false,
                 'content': [{
                     'data': ['BEM stands for Block, Element, Modifier and is beneficial for code as it means your stylesheet nesting should in theory ' +
                         'be limited to 2-3 levels deep. It makes styling far more modular as each "Block" has its own explicit styles which can be ' +
