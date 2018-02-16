@@ -20,8 +20,8 @@ export default Ember.Route.extend({
             {
                 'shortTitle': "Inheritance",
                 'title': "Demonstrate the value of inheritance",
-                'level': 2,
-                'approved': false,
+                'level': 3,
+                'approved': true,
                 'content': [
                     { 'data': [
                         'Inheritance in Javascript can be a matter for argument among developers.',
@@ -265,7 +265,12 @@ export default Ember.Route.extend({
                 'level': 1,
                 'approved': false,
                 'content': [
-                    {'data': ['#TODO look up proxy objects for ES6 multiple inheritance, can also be hacked together with mixins']}
+                    {
+                        'data': [
+                            'Pre-ES6 this could be "hacked" together using mixins, however with the advent of ES6 we can use Proxy components to achieve multiple inheritance.',
+
+                        ]
+                    }
                 ],
             }, {
                 'shortTitle': "DOM",

@@ -80,7 +80,22 @@ export default Ember.Route.extend({
                 'title': "Explain two different strategies for determining where to place a stop",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        title: 'The 2% rule',
+                        data: [
+                            'The 2% rules dictates that you never risk more than 2% of your trading capital.',
+                            'Very simple to set up, simply calculate 2% of your trading capital, and place your stop so that this would be the maximum amount you can lose (keeping in mind the spread)',
+                            'The downside of this strategy is that it doesn\'t account very well for volitile markets that may rebound quickly',
+                        ],
+                    }, {
+                        title: 'Average true range',
+                        data: [
+                            'The average true range is the amount of volatility of a market over the last 14 days. To turn this into a stop-loss strategy you must decide on a percentage of this on which to place your stop.',
+                            'This percentage depends largely on the market in question as well as the length of time you expect/want the position to be open.',
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Strategies for a limit',
                 'title': "Explain two different strategies for determining where to place a limit",
