@@ -45,7 +45,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Scopes",
                 'title': "List 3 available scopes in Javascript and demonstrate their differences",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'data': ['There are three scopes in javascript world. Global, Local and Block scopes.'],
                 }, {
@@ -80,7 +80,7 @@ export default Ember.Route.extend({
                 'shortTitle': "JS in 6 characters",
                 'title': "How is it possible that any Javascript program be represented using combinations of just 6 characters?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'data': ['This is a fun example of how we can take advantage of JS "helper" functions and end up writing ' +
                         'code with the characters "[]()=-"'],
@@ -111,7 +111,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Primitive data types",
                 'title': "List Javascript's primitive data types and describe their use",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'title': 'Boolean',
                     'data': ['A strictly black and white value that can only be True or False'],
@@ -119,10 +119,14 @@ export default Ember.Route.extend({
                     'title': 'Null',
                     'data': ['Can only ever have the value of null, means a total lack of type and value',
                         'has a value of "object" when accessed through .typeof due to legacy reasons...',
-                        'also not strictly but loosely equivalent to undefined.'],
+                        'also not strictly but loosely equivalent to undefined.',
+                        'Is Developer assigned, and should not exist otherwise'],
                 }, {
                     'title': 'Undefined',
-                    'data': ['The data-type of a variable that has not been defined but is known to exist'],
+                    'data': [
+                        'The data-type of a variable that has not been defined but is known to exist',
+                        'the value of an undeclared variable and the default value for variables until they are explicitly assigned a value.'
+                    ],
                 }, {
                     'title': 'Number',
                     'data': ['Values can include any integer or float value as well as +Infinity, -Infinity and NaN (Not a Number)'],

@@ -21,7 +21,7 @@ export default Ember.Route.extend({
                 'shortTitle': 'Well structured HTML',
                 'title': "Describe the qualities of a well structured HTML document",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'data': ['HTML is the skeleton on which we hang all the other parts of our web developer code.']
                 }, {
@@ -60,7 +60,7 @@ export default Ember.Route.extend({
                 'shortTitle': 'Accessibility',
                 'title': "List a number of common accessibility features of HTML",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'type': 'list',
                     'data': [
