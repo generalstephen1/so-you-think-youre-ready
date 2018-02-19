@@ -104,6 +104,16 @@ export default Ember.Route.extend({
                         'picked up and dropped into other places in the code and be repeated without concern',
                         'It also greatly assists in the readability of the code as each segment is explicitly defined and '],
                 }, {
+                    type: 'list',
+                    title: "BEM is G.R.E.A.T",
+                    data: [
+                        'G - Global',
+                        'R - Readable',
+                        'E - Expandable',
+                        'A - Adaptable',
+                        'T - Tough',
+                    ]
+                }, {
                     'type': 'code-snippet',
                     'data': [
                         '// for this html',
