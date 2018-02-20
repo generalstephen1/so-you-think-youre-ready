@@ -84,7 +84,8 @@ export default Ember.Route.extend({
                 'content': [{
                     'type': 'list',
                     'data': [
-                        '<a href="https://git.iggroup.local/projects/WTP/repos/platform/pull-requests/2363/overview" target="_blank">Not enough space for feed titles 🔗</a>'
+                        '<a href="https://git.iggroup.local/projects/WTP/repos/platform/pull-requests/2363/overview" target="_blank">Not enough space for feed titles 🔗</a>',
+                        '<a href="https://git.iggroup.local/projects/WTP/repos/platform/pull-requests/2409/overview" target="_blank">Improve findability of flyout marketView contract switcher 🔗</a>'
                     ]
                 }],
             }, {
