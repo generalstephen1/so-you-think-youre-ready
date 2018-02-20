@@ -26,8 +26,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Advantages of CFDs',
                 'title': "List the advantages of trading CFDs over physical shares",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         data: [
@@ -47,8 +47,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'CFD vs Spread Bet',
                 'title': "Explain the difference between CFD trading and spread betting",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         data: [
@@ -78,8 +78,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Strategies for a stop',
                 'title': "Explain two different strategies for determining where to place a stop",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         title: 'The 2% rule',
@@ -159,8 +159,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Smart Portfolio... "safer"',
                 'title': "Explain why a Smart Portfolio is considered a 'safer' instrument",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         data: ['Smart portfolios are auto-rebalancing portfolios that react "smartly" to market changes. They are safer as they contain ' +
@@ -171,8 +171,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Robo-advice competitors',
                 'title': "Name 3 key competitors in the robo-advice industry",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         data: ['"robo-advisors are simply online wealth managers that invest their clients’ money in mainstream investments with a goal of generating attractive risk-adjusted returns over time."']
@@ -195,8 +195,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'IG & BlackRock',
                 'title': "Explain IG's relationship with BlackRock",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         data: [
@@ -215,8 +215,8 @@ export default Ember.Route.extend({
             }, {
                 'shortTitle': 'Quote vs on exchange',
                 'title': "Explain the difference of at quote vs on exchange in share trading",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {data: [
                         '"On Exchange" means the price at the point there is a trade directly with an order book (Direct Market Access or DMA)',
@@ -231,8 +231,8 @@ export default Ember.Route.extend({
                 'content': null,
             }, {
                 'shortTitle': 'Fundamental analysis how to',
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'title': "Demonstrate how a client could perform fundamental analysis on a market",
                 'content': [{
                     data: [

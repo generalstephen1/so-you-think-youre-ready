@@ -68,7 +68,7 @@ export default Ember.Route.extend({
                 'shortTitle': 'Embers Resolver',
                 'title': "Explain the purpose of Ember's Resolver and how it supports convention over configuration",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {'data': ['Embers resolver the name of its mechanism of looking up the various parts of your application by utilising it\'s naming conventions to easily parse project structure']},
                     {

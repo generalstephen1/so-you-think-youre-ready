@@ -80,7 +80,7 @@ export default Ember.Route.extend({
                 'shortTitle': 'Flexbox',
                 'title': "Use CSS Flexbox to solve a variety of common layout problems without JavaScript",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'type': 'list',
                     'data': [
@@ -98,7 +98,7 @@ export default Ember.Route.extend({
                 'shortTitle': 'BEM',
                 'title': "Demonstrate advantages of using BEM to structure CSS",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'data': ['BEM stands for Block, Element, Modifier and is beneficial for code as it means your stylesheet nesting should in theory ' +
                         'be limited to 2-3 levels deep. It makes styling far more modular as each "Block" has its own explicit styles which can be ' +

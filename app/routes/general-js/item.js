@@ -143,7 +143,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Modify arrays and Immutable",
                 'title': "Demonstrate how to modify an array and explain the pros/cons of an immutable approach",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {'data': [
                         'Arrays are by definition index-based systems and as such the index is the primary method used to modify them, take the below example',
@@ -218,7 +218,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Arrow functions",
                 'title': "Why were arrow functions introduced to javascript?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     'data': ['Arrow functions have two main advances compared to their defined function counterparts',
                         '1) Shorter syntax, it is quicker to write ()=>{} than function(){}, and',
@@ -258,21 +258,21 @@ export default Ember.Route.extend({
                 'shortTitle': "Own vs prototype properties",
                 'title': "Explain the difference between own properties vs prototype properties",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
-                    {'data': ['Own properties are properties that belong to the instance of a class whereas a prototype property is somthing that is on the class itself and will therefore ' +
-                             'affect all instances of that class.']}
+                    {'data': ['Own properties are properties that belong to the instance of a object (with a prototype) whereas a prototype property is somthing that is on the prototype object itself and will therefore ' +
+                             'affect all objects that have that prototype ']}
                 ],
             }, {
                 'shortTitle': "Multiple inheritance",
                 'title': "Demonstrate how to achieve multiple inheritance in Javascript",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         'data': [
                             'Pre-ES6 this could be "hacked" together using mixins, however with the advent of ES6 we can use Proxy components to achieve multiple inheritance.',
-
+                            'These mixins would loop through multiple "parent" objects and assign their keys to the child'
                         ]
                     }
                 ],
@@ -280,7 +280,7 @@ export default Ember.Route.extend({
                 'shortTitle': "DOM",
                 'title': "Explain the purpose of the DOM and its APIs",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {'data': [
                         'The DOM (Document Object Model) is the point where scripts and webpages meet and are interpreted by a browser.',
@@ -302,7 +302,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Event capturing vs bubbling",
                 'title': "What is the difference between event capturing and event bubbling? ",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {'data': [
                         'By default when (almost) any event happens on an element it will trigger the handlers first on that element',
@@ -323,7 +323,7 @@ export default Ember.Route.extend({
                 'shortTitle': "AJAX",
                 'title': "What is AJAX and why is it important that it is asynchronous?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {'data': [
                         'AJAX stands for Asynchronous Javascript and XML and is an XMLHttpRequest sent by the browser to communicate with a server.',
@@ -335,7 +335,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Data structures in JSON",
                 'title': "Demonstrate how to express a variety of data structures in JSON",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     data: [
                         'Javascript Object Notation or JSON is a strict, object oriented method for displaying complex data through simple rules',
@@ -345,17 +345,17 @@ export default Ember.Route.extend({
                 }, {
                     'type': 'code-snippet',
                     'data': [
-                        "rawData: {",
-                        "    title: 'Knowledge of JS',",
-                        "    points: [",
-                        "       {",
-                        "           'shortTitle': 'Data structures in JSON',",
-                        "           'title': 'Demonstrate how to express a variety of data structures in JSON',",
-                        "           'content': [...allthecontent],",
-                        "       },",
-                        "       {...}, {...}, {...},",
-                        "    ]",
-                        "}"
+                        '{',
+                        '    "title": "Knowledge of JS",',
+                        '    "points": [',
+                        '       {',
+                        '           "shortTitle": "Data structures in JSON",',
+                        '           "title": "Demonstrate how to express a variety of data structures in JSON",',
+                        '           "content": [...allthecontent]',
+                        '       },',
+                        '       {...}, {...}, {...},',
+                        '    ]',
+                        '}'
                     ]
                 }, {
                     data: 'which is very nearly JSON, mostly it it using single rather than double quotes',
@@ -364,7 +364,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Singleton",
                 'title': "What is a singleton and when might you use one?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data: [
                             'A singleton is an object in an application that there is ony one of (by design). All references to the singleton reference a single instance.',
@@ -383,7 +383,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Factory",
                 'title': "What is a Factory and when might you use one?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {
                         data: [
@@ -403,7 +403,7 @@ export default Ember.Route.extend({
                 'shortTitle': "Epoch time",
                 'title': "Why might you want to represent a date as the number of milliseconds from midnight on the 1st January 1970? ",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data: ['Epoch, or Unix time is a standardised measurement primarily for programming that is handy as it does not obey any particular timezone and as such can be taken as ' +
                             'a single point of truth for dates and times as it can then be converted into any time-system required.']}
@@ -415,8 +415,8 @@ export default Ember.Route.extend({
                 'approved': false,
                 'content': [
                     {
-                        data: 'When you use setTimeout it immediately removes the block of code from the current processing thread. As JS is a single-threaded language it will continue with everything ' +
-                              'else queued on the thread and only then look for things that have been scheduled for later (at which time this would trigger)'
+                        data: ['When you use setTimeout it immediately removes the block of code from the current processing thread. As JS is a single-threaded language it will continue with everything ' +
+                              'else queued on the thread and only then look for things that have been scheduled for later (at which time this would trigger)']
                     }
                 ],
             }]
