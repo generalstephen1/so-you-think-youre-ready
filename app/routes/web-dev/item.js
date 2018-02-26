@@ -75,7 +75,32 @@ export default Ember.Route.extend({
                 'title': "Demonstrate a thorough knowledge of using CSS to apply styles and layout to HTML",
                 'level': 3,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        data: [
+                            'CSS, or Cascading Style Sheets and the means by which a developer can add or change styling and basic functionality to a DOM',
+                            'In this I will cover a few interesting points of CSS; Vendor prefix\'s, what the cascade is and why CSS animation is a good thing',
+                        ]
+                    }, {
+                        title: 'The Vendor Prefix',
+                        data:   [
+                            'Adding vendor specific keywords to a stylesheet allowed Vendors (or browser manufacturers) to popularise/make use of graceful degradation/progressive enhancement in web apps.',
+                            'The benefit for manufacturers is that they could support experimental features before they were more widely supported.'
+                        ]
+                    }, {
+                        title: 'The Cascade',
+                        data: [
+                            'The cascade is a beautiful and terrible thing. The simple explanation is that every child component inherits the styles of the parent, right but up to the root.',
+                            'This is both a powerful tool as you can define a "global" font colour at the top level and have it "cascade" down to all your elements. But it is also a headache for developers as they strive to figure out why the silly box is still purple',
+                        ]
+                    }, {
+                        title: 'CSS animations',
+                        data: [
+                            'The key to CSS animations is the great catch-phrase "hardware accellerated". This has several meanings but it is most often interpreted as a near native processing of graphical changes within a browser and offloading of animation computations to a separate thread.',
+                            'CSS animations really came to the fore in the post-JQuery days and outclassed this method of animation significantly. As to the CSS vs JS for animations the jury is still out as both have made big leaps on this front in recent history <a href="https://css-tricks.com/myth-busting-css-animations-vs-javascript/" target="_blank">Read More</a>'
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Flexbox',
                 'title': "Use CSS Flexbox to solve a variety of common layout problems without JavaScript",

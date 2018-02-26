@@ -398,7 +398,13 @@ export default Ember.Route.extend({
                 'title': "Why were Promises introduced to Javascript?",
                 'level': 2,
                 'approved': false,
-                'content': '',
+                'content': [
+                    {data: [
+                        'TL;DR - Callback Hell',
+                        'Promises were introduced to JS in the ES2015 spec. This does not mean they were new to the coding world, in fact they have been around a very long time',
+                        'They were introduced as it was a common pattern prior to the spec for developers to use third parties to achieve a similar outcome to handle asynchronous callbacks.',
+                    ]}
+                ],
             }, {
                 'shortTitle': "Epoch time",
                 'title': "Why might you want to represent a date as the number of milliseconds from midnight on the 1st January 1970? ",

@@ -22,7 +22,22 @@ export default Ember.Route.extend({
                 'title': "Identify which asset class a market belongs to",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        type: 'list',
+                        title: 'The traditional four types of asset class are:',
+                        data: [
+                            "Equities (or stocks): the shares that make up the ownership of public companies.",
+                            "Fixed income: investments that pay interest over time, then return the original sum paid. Bonds are the most common form of fixed income asset.",
+                            "Money market: cash and its equivalents, very liquid but without much room for growth. Currencies are included in this class.",
+                            "Alternative investments: some very popular markets are classed as alternative investments. Property and commodities feature here, though many investors would put them in their own asset class.",
+                        ]
+                    },{
+                        data: [
+                            "To prevent the risk associated with investing in one section of the market, many investment strategies recommend spreading trades out across many or all of the above asset classes. This is referred to as diversification (or diversifying)."
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Advantages of CFDs',
                 'title': "List the advantages of trading CFDs over physical shares",
@@ -62,19 +77,40 @@ export default Ember.Route.extend({
                 'title': "Demonstrate how IG make money",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        data: [
+                            'IG makes it\'s money from from premium service fees, but primarily from the spread.',
+                            'The spread is the small difference between the buy and sell prices seen on the platform which are a small margin above the actual market spread.',
+                            'So a share priced at 100p to sell and 102p to buy might be 99p to sell and 103p to buy via a spread bet.',
+                            'This means that IG will make money regardless of whether a client makes a loss or a profit.'
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'How to trade a binary',
                 'title': "Demonstrate how to trade a binary (digitals)",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data: ['---- live demo ----']}
+                ],
             }, {
                 'shortTitle': 'Trade size factors',
                 'title': "Explain the factors a client should consider when deciding the size for a trade",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        type: 'list',
+                        title: 'Factors could include but are not limited to',
+                        data: [
+                            'The volatility of your chosen marked',
+                            'Initial deposit – Your position’s size will also affect your initial deposit or margin; the bigger your bet/deal size, the more margin you’ll need to pay.',
+                            'Minimum bet size – Every market also comes with a minimum size, which will vary from market to market and from provider to provider.'
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Strategies for a stop',
                 'title': "Explain two different strategies for determining where to place a stop",
@@ -101,37 +137,57 @@ export default Ember.Route.extend({
                 'title': "Explain two different strategies for determining where to place a limit",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data: [
+                        'The primary advantage of a limit order is that it guarantees that the trade will be made at a particular price or better and saves you time and effort, "Click and Forget"',
+                        'A strategy for placing a limit is if you think there might be a line of resistance at a certain price but you don\'t want to lose your earnings so far you place a limit just below that line of resistance.'
+                    ]}
+                ],
             }, {
                 'shortTitle': 'Orders and positions',
                 'title': "Explain the difference between orders and positions",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        'data': ['an order is an instruction to open or close a trade, a position on the other hand is a trade that is either currently able to incur a profit or loss.']
+                    }
+                ],
             }, {
                 'shortTitle': 'Alerts in a trading strategy',
-                'title': "Explain how clients could use alerts to compliment their trading strategy #Novice",
+                'title': "Explain how clients could use alerts to compliment their trading strategyem ",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [{data: ['Use price alerts to get a notification when a set market hits a certain level, so that you can monitor markets, limit your risk and time your trades']}],
             }, {
                 'shortTitle': 'News in a trading strategy',
-                'title': "Explain how clients could use news to compliment their trading strategy #Novice",
+                'title': "Explain how clients could use news to compliment their trading strategy",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data: [
+                        'News trading involves either buying or shorting a security immediately after a major news event.',
+                        'The  news can be a big part of market volitility. Paying attention to the news about a particular industry could be valuable for determining if the value of a position will change.'
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Signals in a trading strategy',
                 'title': "Explain how clients could use signals to compliment their trading strategy",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [{data: [
+                    'Signals are a simple "Buy" or "Sell" instruction from market analysts (IG uses Autochartist and PIA-First).',
+                    'They can be used to complement a trading strategy by offloading the market research to a third party and giving you an actionable, researched stance to take on a market.'
+                ]}],
             }, {
                 'shortTitle': 'Economic calendar in a trading strategy',
                 'title': "Explain how clients could use an economic calendar to compliment their trading strategy",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data: ['You can use economic calendar alerts if you think that the markets are going to respond to a particular economic event, like non-farm payrolls.']}
+                ],
             }, {
                 'shortTitle': 'Competitors',
                 'title': "List our main competitors and describe the differences in our offering",
@@ -143,19 +199,28 @@ export default Ember.Route.extend({
                 'title': "Explain how the needs of our clients differ across mobile and desktop platforms",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [{data: [
+                    'In general, mobile users spend more and make more (or lose less) than their web-based counterparts',
+
+                ]}],
             }, {
                 'shortTitle': 'Managed vs Self-Directed trade',
                 'title': "Explain the difference between managed and self directed trading",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [{data: ['Simply put, a self-directed trade is where you invest your capital directly based on your own market research whereas a managed trade is done through a broker or portfolio and is managed by someone else (individual, bot, or a group).']}],
             }, {
                 'shortTitle': 'Share dealing vs smart portfolios',
                 'title': "Explain the difference between share dealing and smart portfolios",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data: [
+                        'Share dealing is the buying and selling of shares in the hope of earning a profit.',
+                        'An IG Smart Portfolio is a fully managed, broadly diversified portfolio with exposure to many global markets such as fixed income and equity, along with alternative investments such as gold and property.',
+                        'The difference then is share dealing is a part of a smart portfolio but is self managed. whereas a smart portfolio is auto-managed.'
+                    ]}
+                ],
             }, {
                 'shortTitle': 'Smart Portfolio... "safer"',
                 'title': "Explain why a Smart Portfolio is considered a 'safer' instrument",
@@ -211,7 +276,12 @@ export default Ember.Route.extend({
                 'title': "Explain what a rebalance is and how often IG does it",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data: [
+                        'Rebalancing is the act of looking at a portfolio and readjusting the weightings of assets',
+                        'IG will typically rebalance a portfolio on a quarterly basis, but we monitor the investments daily. This means we can rebalance the asset allocations in the portfolio whenever necessary, and respond to changes in market conditions.',
+                    ]}
+                ],
             }, {
                 'shortTitle': 'Quote vs on exchange',
                 'title': "Explain the difference of at quote vs on exchange in share trading",

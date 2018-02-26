@@ -160,28 +160,43 @@ export default Ember.Route.extend({
                 'level': 1,
                 'approved': false,
                 'content': [
-                    { 'data': ['The {{yield}} block within a handlebars component will replace itself with anything added between its open and closing tags if expressed as a block'], },
                     {
-                        'type': 'code-snippet',
-                        'data': [
-                            ' // application.hbs',
-                            '{{#mySuperComponent}}',
-                            '   {{#myOtherSuperComponent}}',
-                            '{{/mySuperComponent}}',
+                        data: ['Yielding params from within a component is a useful way to display the same data in a myriad of ways.']
+                    },{
+                        type: 'code-snippet',
+                        data: [
+                            '//super-hero.hbs',
+                            '<h1>Greetings human, I am the almighty {{hero.title}}</h1>',
+                            '{{yield hero.title hero.superpower hero.weakness hero.isDead}}'
+                        ]
+                    },{
+                        type: 'code-snippet',
+                        data: [
+                            '//super-hero.hbs',
+                            '{{#super-hero hero=model as |title superpower weakness isDead|}}',
+                            '   {{#unless isDead}}',
+                            '       <h2>Bow before my {{superpower}}</h2>',
+                            '       <p>But please ignore my {{weakness}}</>',
+                            '   {{/unless}}',
+                            '{{/super-hero}}',
+                        ]
+                    },{
+                        type: 'code-snippet',
+                        data: [
+                            '//list-of-heroes.hbs',
+                            '{{#for heroes as |hero|}}',
+                            '   <h1> Heroes, sign off! </h1>',
+                            '   <p>',
+                            '   {{#super-hero hero=hero as |title superpower weakness isDead|}}',
+                            '       {{title}} - {{isDead}}, ',
+                            '   {{/super-hero}}',
+                            '   </p>',
+                            '{{/for}}'
                         ]
                     }, {
-                        'data': [
-                            'This would result in "myOtherSuperComponent" being rendered wherever "mySuperComponent"s {{yield}} block is',
-                            'This makes components more composable as if you have a generic wrapper for content you can re-use this for each block of content'
-                        ],
-                    }, {
-                        'type': 'code-snippet',
-                        'data': [
-                            '// mySuperComponent.hbs',
-                            '<div>',
-                            '   <h1> Below you will find the results of your awesome search! </h1>',
-                            '   {{yield}}',
-                            '</div>',
+                        data: [
+                            'In both cases we use the same component with the same information but the actual output is different depending what the parent template requires',
+                            'This makes our "super-hero" component far more composable depending on its displaying circumstances.'
                         ]
                     }
                 ],
@@ -225,13 +240,44 @@ export default Ember.Route.extend({
                 'title': "Demonstrate how to package appropriate reusable code as an Ember Addon",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    { data: ['when you run']},
+                    { data: ['ember install <package name>'], type: 'code-snippet'},
+                    { data: ['you are installing what is known as an ember addon.']},
+
+                ],
             }, {
                 'shortTitle': 'ember-cli build pipeline',
                 'title': "Demonstrate how to leverage the ember-cli build pipeline to affect the binary output",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data:[
+                        'The Ember-Cli build pipeline is handled largely by Broccoli, a fast, Rails inspired process.',
+                        'This process can of course be tweaked and changed to make the build process better suited to however your app functions.',
+                        'A common example of something that would affect this pipeline is enabling Babel shims to better support async/await functionality in your promises'
+                    ]},{
+                        type: 'code-snippet',
+                        data: [
+                            'module.exports = function(defaults) {',
+                            '    let app = new EmberApp(defaults, {',
+                            '      "ember-cli-babel": {',
+                            '        sourceMaps: "inline",',
+                            '        includePolyfill: true,',
+                            '      },',
+                            '    });',
+                            '  ',
+                            '    app.import(app.bowerDirectory + "/material-design-lite/material.css");',
+                            '    return app.toTree();',
+                            '};',
+
+                        ]
+                    }, {
+                        data: [
+                            'The above is the ember-cli-build.js file for this project. As you can see it includes some custom functionality for ember-cli-babel as well as an external styling library for access within the sass files.',
+                        ]
+                    }
+                ],
             }]
     }
 });
