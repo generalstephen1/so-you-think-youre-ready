@@ -18,23 +18,34 @@ export default Ember.Route.extend({
         title: 'Testing',
         points: [
             {
-                'shortTitle': 'Unit',
-                'title': "Identify scenarios appropriate for unit testing",
+                'shortTitle': 'Unit, Integration, Acceptance',
+                'title': "Identify scenarios appropriate for unit, integration and acceptance testing",
                 'level': 2,
                 'approved': false,
-                'content': null,
-            }, {
-                'shortTitle': 'Integration',
-                'title': "Identify scenarios appropriate for integration testing",
-                'level': 1,
-                'approved': false,
-                'content': null,
-            }, {
-                'shortTitle': 'Acceptance',
-                'title': "Identify scenarios appropriate for acceptance testing",
-                'level': 2,
-                'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        title: 'Unit Tests',
+                        data: [
+                            "Unit testing is an ideal place to test individual methods or functions that are 'pure' functions and are guaranteed to have the same outcome based on an identical income.",
+                            "In the Pyrimid of tests you should have the most amount of Unit tests in your test suite as they are quick to run and test the most base-level functionality.",
+                            "A good example of a Unit-testable occurrance is mathematical formulae, ie: a pure function that will return a value times by PI."
+                        ]
+                    }, {
+                        title: 'Integration Tests',
+                        data: [
+                            "Integration testing is the middle of your testing pyramid and as such should have fewer tests than Unit as they are a bit slower and more intensive to run.",
+                            "Your integration tests need to occur when you have multiple modules of code that need to work together, but the interaction is still simple enough to make the tests reasonably fast and reliable. It uses Stubs and drivers to 'fake' the rest of the app.",
+                            "An example of a Integration test scenario would be testing that user input in a field is validated properly"
+                        ]
+                    }, {
+                        title: 'Acceptance Tests',
+                        data: [
+                            "Acceptance tests sit at the tip of the pyramid and test full user flows and large orchestrations of your application.",
+                            "They are both fragile and intensive to run.",
+                            "An example of Acceptance testing is user login or registration, filling in a form, submitting the form and getting redirected if not authenticated."
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Sinon DRY tests',
                 'title': "Demonstrate using Sinon to write DRY tests",
