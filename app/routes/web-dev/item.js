@@ -1,20 +1,21 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route'
 import { massage } from '../../helpers/massage-data'
 import { slugComparison } from '../../helpers/slug-comparison'
 
-export default Ember.Route.extend({
+export default Route.extend({
     templateName: 'route-entrypoint',
     data: null,
 
     init() {
-        this.set('data', massage(this.rawData, 'web-dev'));
+        this._super(...arguments)
+        this.set('data', massage(this.rawData(), 'web-dev'));
     },
 
     model(params) {
         return slugComparison(this.get('data'), params.slug);
     },
 
-    rawData: {
+    rawData(){ return {
         title: 'General Web Dev',
         points: [
             {
@@ -193,5 +194,5 @@ export default Ember.Route.extend({
                 }],
             },
         ]
-    }
+    }}
 });

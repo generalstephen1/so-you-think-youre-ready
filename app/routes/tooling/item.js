@@ -1,20 +1,21 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route'
 import { massage } from '../../helpers/massage-data'
 import { slugComparison } from '../../helpers/slug-comparison'
 
-export default Ember.Route.extend({
+export default Route.extend({
     templateName: 'route-entrypoint',
     data: null,
 
     init() {
-        this.set('data', massage(this.rawData, 'tooling'));
+        this._super(...arguments)
+        this.set('data', massage(this.rawData(), 'tooling'));
     },
 
     model(params) {
         return slugComparison(this.get('data'), params.slug);
     },
 
-    rawData: {
+    rawData(){ return {
         title: 'Testing',
         points: [
             {
@@ -97,16 +98,18 @@ export default Ember.Route.extend({
                 'content': null,
             }, {
                 'shortTitle': 'Linting Config',
-                'title': "[Linter] Appropriately configure Linting for a project",
+                'title': "[Linter] Appropriately configure Linting for a project AND Write your own Lint rules",
                 'level': 1,
                 'approved': false,
-                'content': null,
-            }, {
-                'shortTitle': 'Lint Rules',
-                'title': "[Linter] Write your own Lint rules  ",
-                'level': 2,
-                'approved': false,
-                'content': null,
+                'content': [
+                    {data: ['Setting up linting is as complicated as you want it to be. Find the rules you want to enforce from (in this case) <a href="https://eslint.org/docs/rules/" target="_blank">eslint.org</a> and put them under "rules" in your .eslintrc.js file.']},
+                    {
+                        type: 'list',
+                        data: [
+                            '<a href="https://github.com/generalstephen1/so-you-think-youre-ready/blob/master/.eslintrc.js" target="_blank">The .eslintrc for this project</a>'
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Coverage Report',
                 'title': "[Coverage] Generate a coverage report for a project",
@@ -127,5 +130,5 @@ export default Ember.Route.extend({
                 'content': null,
             },
         ],
-    }
+    }}
 });
