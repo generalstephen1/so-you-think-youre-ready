@@ -23,13 +23,17 @@ export default Route.extend({
                 'title': "[Git] Clone/fork/create repositories and raise pull requests",
                 'level': 3,
                 'approved': false,
-                'content': null,
+                'content': [{
+                    data: ['---- inherent in everyday work ----']
+                }],
             }, {
                 'shortTitle': 'Create/switch/delete/pull/push',
                 'title': "[Git] Create/switch/delete/pull/push branches ",
                 'level': 3,
                 'approved': false,
-                'content': null,
+                'content': [{
+                    data: ['---- inherent in everyday work ----']
+                }],
             }, {
                 'shortTitle': 'Merge conflicts',
                 'title': "[Git] Resolve non-trivial merge conflicts ",
@@ -41,7 +45,15 @@ export default Route.extend({
                 'title': "[Git] Use merge/rebase/cherry-pick/revert strategies appropriately",
                 'level': 2,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        type: 'list',
+                        data: [
+                            '<a href="https://git.iggroup.local/projects/WTP/repos/platform/commits/c08cbc6a5481767067dca62f1f2459371c689cfc" target="_blank">A Real Example of Cherry-Pick (note different WTP code for commit)</a>',
+                            '<a href="https://git.iggroup.local/projects/WTP/repos/platform/commits/26605aa69189ff698c63c00be9dfb046e78feb23#lib/ig-data/addon/helpers/website-id-for-allowed-twitter-feed.js" target="_blank">A Real Example of Revert</a>',
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Local http server',
                 'title': "[Node] Create a local http server",
@@ -107,6 +119,41 @@ export default Route.extend({
                         type: 'list',
                         data: [
                             '<a href="https://github.com/generalstephen1/so-you-think-youre-ready/blob/master/.eslintrc.js" target="_blank">The .eslintrc for this project</a>'
+                        ]
+                    }, {
+                        type: 'code-snippet',
+                        // heading: 'Custom rule example for all button tags having a class of "btn"',
+                        data: [
+                            'var MESSAGE = "All <button> elements must have a class of \'btn\';',
+                            'module.exports = {',
+                            '    meta: {',
+                            '        message: MESSAGE,',
+                            '        schema: []',
+                            '      },',
+                            '      ',
+                            '      create: function(context) {',
+                            '        function isButtonTag(node) {',
+                            '            return node.contains("<button");',
+                            '        }',
+                            '    ',
+                            '        function hasBtnClass(node) {',
+                            '            return node.value.match(/btn/);',
+                            '        }',
+                            '    ',
+                            '        function checkNode(node) {',
+                            '          if (isButtonTag(node) && !hasBtnClass(node)) {',
+                            '            context.report({',
+                            '              node: node,',
+                            '              message: MESSAGE',
+                            '            });',
+                            '          }',
+                            '        }',
+                            '    ',
+                            '        return {',
+                            '          ButtonnHasBtnClass: checkNode',
+                            '        };',
+                            '    }',
+                            '};',
                         ]
                     }
                 ],

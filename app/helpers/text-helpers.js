@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function slugify(params/*, hash*/) {
     return params.toLowerCase()
@@ -6,4 +6,4 @@ export function slugify(params/*, hash*/) {
         .replace(/ +/g,'-');
 }
 
-export default Ember.Helper.helper(slugify);
+export default helper(slugify);

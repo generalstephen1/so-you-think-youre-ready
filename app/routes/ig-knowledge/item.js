@@ -202,7 +202,8 @@ export default Route.extend({
                 'approved': false,
                 'content': [{data: [
                     'In general, mobile users spend more and make more (or lose less) than their web-based counterparts',
-
+                    'However in terms of client needs I would argue that there is very little difference between desktop and mobile beyond the obvious ease of use over tenuous connections.',
+                    'Both platforms need to be able to react to markets and trade with ease and confidence. They both need to display data clearly and easily without clutter and they need'
                 ]}],
             }, {
                 'shortTitle': 'Managed vs Self-Directed trade',
@@ -299,7 +300,15 @@ export default Route.extend({
                 'title': "Demonstrate how to calculate two different technical indicators and plot them on a chart",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        title: 'Bollinger Bands',
+                        data: ['Bollinger Bands® are a highly popular technical analysis technique. Many traders believe the closer the prices move to the upper band, the more overbought the market, and the closer the prices move to the lower band, the more oversold the market.',]
+                    }, {
+                        title: 'Moving Average Convergence/Divergence (MACD)',
+                        data: ['The MACD compares short-term momentum and long-term momentum to signal the current direction of momentum rather than the direction of price. Traders can think of it as the ‘derivative’ of price-based moving averages.']
+                    }
+                ],
             }, {
                 'shortTitle': 'Fundamental analysis how to',
                 'level': 2,

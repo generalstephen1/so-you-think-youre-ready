@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function slugComparison(curData, slug) {
   let activeContent = curData.points.filter((datum) => { return datum.slug === slug })[0];
@@ -28,4 +28,4 @@ export function slugComparison(curData, slug) {
   }
 }
 
-export default Ember.Helper.helper(slugComparison);
+export default helper(slugComparison);

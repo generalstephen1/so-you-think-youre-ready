@@ -1,9 +1,4 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
-    actions: {
-        // loadPoint(index){
-        //     this.get('loadPoint')(index)
-        // }
-    }
+export default Component.extend({
 });
