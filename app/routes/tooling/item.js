@@ -22,7 +22,7 @@ export default Route.extend({
                 'shortTitle': 'Clone/fork/create',
                 'title': "[Git] Clone/fork/create repositories and raise pull requests",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     data: ['---- inherent in everyday work ----']
                 }],
@@ -30,7 +30,7 @@ export default Route.extend({
                 'shortTitle': 'Create/switch/delete/pull/push',
                 'title': "[Git] Create/switch/delete/pull/push branches ",
                 'level': 3,
-                'approved': false,
+                'approved': true,
                 'content': [{
                     data: ['---- inherent in everyday work ----']
                 }],
@@ -59,13 +59,47 @@ export default Route.extend({
                 'title': "[Node] Create a local http server",
                 'level': 2,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        type: 'code-snippet',
+                        data: [
+                            "// my-awesome-server.js",
+                            "var http = require('http');",
+                            "",
+                            "http.createServer(function (request, response) {",
+                            "    response.writeHead(200, {'Content-Type': 'text/plain'});",
+                            "    response.end('Hello World\n');",
+                            "}).listen(8080);",
+                            "",
+                            "console.log('Server started');",
+                        ]
+                    }, {
+                        data: ['then run it with']
+                    }, {
+                        type: 'code-snippet',
+                        data: ['node my-awesome-server.js']
+                    }, {
+                        data: ['you should then be able to navigate to http://localhost:8080']
+                    }
+                ],
             }, {
                 'shortTitle': 'Run test suites',
                 'title': "[Node] Run test suites from the terminal  ",
                 'level': 2,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        type: 'code-snippet',
+                        data: ['$ Ember test']
+                    },{
+                        data: ['to run the full test suite']
+                    },{
+                        type: 'code-snippet',
+                        data: ['$ Ember test --filter="Integration"']
+                    },{
+                        data: ['to run a grep over tests based on test name']
+                    }
+                ],
             }, {
                 'shortTitle': 'NPM modules',
                 'title': "[NPM] Use NPM modules to package and publish re-usable code",
@@ -73,8 +107,8 @@ export default Route.extend({
                 'approved': false,
                 'content': null,
             }, {
-                'shortTitle': 'NVN',
-                'title': "[NPM] Use NVN to manage local NPM versions",
+                'shortTitle': 'NVM',
+                'title': "[NPM] Use NVM to manage local NPM versions",
                 'level': 2,
                 'approved': false,
                 'content': null,
