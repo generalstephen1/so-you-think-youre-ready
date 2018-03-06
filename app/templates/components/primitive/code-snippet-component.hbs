@@ -1,3 +1,8 @@
+
+{{#if block.title}}
+<span class="text-component__divider"></span>
+<h4 class="text-component__title">{{block.title}}</h4>
+{{/if}}
 <pre class="code-snippet">
 <code class="card code-snippet__code">
 {{#each block.data as |line|}}

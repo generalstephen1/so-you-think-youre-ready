@@ -202,19 +202,82 @@ export default Route.extend({
                 'title': "Demonstrate how to write map, filter and reduce using traditional loops e.g. for and while",
                 'level': 2,
                 'approved': false,
-                'content': '',
+                'content': [
+                    {
+                        type: 'code-snippet',
+                        data: [
+                            'const supers = [',
+                            '   {name: "spiderman", superPower: "spidey sense", age:15}',
+                            '   {name: "superman", superPower: "generally super", age:29}',
+                            '   {name: "iron man", superPower: "money", age:42}',
+                            ']',
+                        ]
+                    },{
+                        title: 'Map',
+                        type: 'code-snippet',
+                        data: [
+                            'let superPowers = [];',
+                            'for (let i = 0; i < supers.length; i++){',
+                            '   superPowers.push(supers[i].superPower);',
+                            '}',
+                        ],
+                    },{
+                        title: 'Filter',
+                        type: 'code-snippet',
+                        data: [
+                            'let heroesWithLongNames = [];',
+                            'for (let i = 0; i < supers.length; i++){',
+                            '   if(supers[i].name.length > 8){',
+                            '       heroesWithLongNames.push(supers[i]);',
+                            '   }',
+                            '}',
+                        ],
+                    },{
+                        title: 'Reduce',
+                        type: 'code-snippet',
+                        data: [
+                            'const someNumbers = [1, 2, 3, 4, 5, 6, 7]',
+                            'let sum = 0;',
+                            'for (let i = 0; i < someNumbers.length; i++){',
+                            '   sum += someNumbers[i]',
+                            '}',
+                        ],
+                    }
+                ],
             }, {
                 'shortTitle': "Inappropriate if else",
                 'title': "Demonstrate a scenario where an 'if else' block is inappropriate and illustrate an alternative ",
                 'level': 2,
                 'approved': false,
-                'content': '',
+                'content': [
+                    {
+                        type: 'code-snippet',
+                        data: [
+                            '// Wrong',
+                            'let myVar = 0;',
+                            'if (!myVar) {',
+                            '   return "I Am Zero"',
+                            '} else {',
+                            '   return "I Am NOT Zero"',
+                            '}',
+                            '',
+                            '// Right',
+                            'let myVar = 0;',
+                            'if (!myVar) {',
+                            '   return "I Am Zero"',
+                            '}',
+                            'return "I Am NOT Zero"',
+                        ],
+                    }
+                ],
             }, {
                 'shortTitle': "Anonymous function",
                 'title': "What is an 'anonymous function'?",
                 'level': 2,
                 'approved': false,
-                'content': '',
+                'content': [
+                    {data: ['It is a generally inline function that is not assigned to a reference. Often used to pass into other functions as a parameter to trigger as a callback, for instance in a setTimeout you would typically use an anonymous function']}
+                ],
             }, {
                 'shortTitle': "Arrow functions",
                 'title': "Why were arrow functions introduced to javascript?",
