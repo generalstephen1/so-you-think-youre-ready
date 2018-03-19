@@ -105,13 +105,44 @@ export default Route.extend({
                 'title': "[NPM] Use NPM modules to package and publish re-usable code",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                        type: 'code-snippet',
+                        data: ['$ npm init']
+                    }, {
+                        data: [
+                            'This will create a package.json file, follow the prompts to set up.',
+                            'Then create an index.js file (this is the default entrypoint), inside that file create a property of the exports object',
+                            'Make sure your package has a unique name and that you\'re logged into npm through ',
+                        ]
+                    }, {
+                        type: 'code-snippet',
+                        data: ['$ npm adduser']
+                    }, {
+                        data: ['Then publish']
+                    }, {
+                        type: 'code-snippet',
+                        data: ['$ npm publish']
+                    }
+                ],
             }, {
                 'shortTitle': 'NVM',
                 'title': "[NPM] Use NVM to manage local NPM versions",
                 'level': 2,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {
+                         type: 'code-snippet',
+                         data: [
+                             '$ nvm install 9'
+                         ]
+                    },{
+                         type: 'code-snippet',
+                         data: [
+                             '$ nvm use 9'
+                         ]
+                    }
+                ],
             }, {
                 'shortTitle': 'Build plans with watch',
                 'title': "[CI] Configure a build plan that runs when a branch is updated and runs tests  ",

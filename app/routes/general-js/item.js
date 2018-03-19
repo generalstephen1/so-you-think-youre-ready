@@ -293,7 +293,34 @@ export default Route.extend({
                 'title': "Demonstrate how improper use of closures can cause memory leaks",
                 'level': 1,
                 'approved': false,
-                'content': '',
+                'content': [
+                    {
+                        type: 'code-snippet',
+                        data: [
+                            'var res;',
+                            '',
+                            'function myAwesomeClosure() {',
+                            '	var largeData = new Array(10000000);',
+                            '	var oldRes = res;',
+                            '',
+                            '    /* Unused function that leaks */',
+                            '	function unusedInnerFn() {',
+                            '		if (oldRes) return largeData;',
+                            '	}',
+                            '',
+                            '	return function(){};',
+                            '}',
+                            '',
+                            'setInterval(function() {',
+                            '	res = outer();',
+                            '}, 100);',
+                        ]
+                    }, {
+                        data: [
+                            'Because "unusedInnerFn" references "largeData", even though it is never called it means that every time the closure is called it makes a new "largeData" and saves it in memory'
+                        ]
+                    }
+                ],
             }, {
                 'shortTitle': "RegExp",
                 'title': "Demonstrate a scenario in which using a RegExp would be appropriate ",
@@ -317,7 +344,15 @@ export default Route.extend({
                 'title': "Why is it a bad idea to assign objects as prototype properties?",
                 'level': 1,
                 'approved': false,
-                'content': '',
+                'content': [
+                    { data: [
+                        'The assigning of .prototype (or .__proto__ back in the day) is known as a way to significantly de-optimise your code and block code optimisation in the future.',
+                        'It\'s bad because when you change the prorotype chain of an object you are essentially changing its internal type, it will not simply become a subclass but is completely swapped. ' +
+                        'This causes all property lookup optimisations to be flushed and pre-compiled code discarded.',
+                        'Beyond the technical fallout of assigning prototype properties there is a confusion element of this assignment, especially if a developer overwrites a prototype property and ' +
+                        'functionality changes to something other developers may not expect.',
+                    ] }
+                ],
             }, {
                 'shortTitle': "Own vs prototype properties",
                 'title': "Explain the difference between own properties vs prototype properties",
