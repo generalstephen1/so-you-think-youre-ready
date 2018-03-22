@@ -21,8 +21,8 @@ export default Route.extend({
             {
                 'shortTitle': 'Asset classes and markets',
                 'title': "Identify which asset class a market belongs to",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         type: 'list',
@@ -76,8 +76,8 @@ export default Route.extend({
             }, {
                 'shortTitle': 'IG Revenue',
                 'title': "Demonstrate how IG make money",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         data: [
@@ -91,16 +91,16 @@ export default Route.extend({
             }, {
                 'shortTitle': 'How to trade a binary',
                 'title': "Demonstrate how to trade a binary (digitals)",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {data: ['---- live demo ----']}
                 ],
             }, {
                 'shortTitle': 'Trade size factors',
                 'title': "Explain the factors a client should consider when deciding the size for a trade",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         type: 'list',
@@ -136,8 +136,8 @@ export default Route.extend({
             }, {
                 'shortTitle': 'Strategies for a limit',
                 'title': "Explain two different strategies for determining where to place a limit",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {data: [
                         'The primary advantage of a limit order is that it guarantees that the trade will be made at a particular price or better and saves you time and effort, "Click and Forget"',
@@ -147,8 +147,8 @@ export default Route.extend({
             }, {
                 'shortTitle': 'Orders and positions',
                 'title': "Explain the difference between orders and positions",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {
                         'data': ['an order is an instruction to open or close a trade, a position on the other hand is a trade that is either currently able to incur a profit or loss.']
@@ -157,14 +157,14 @@ export default Route.extend({
             }, {
                 'shortTitle': 'Alerts in a trading strategy',
                 'title': "Explain how clients could use alerts to compliment their trading strategyem ",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [{data: ['Use price alerts to get a notification when a set market hits a certain level, so that you can monitor markets, limit your risk and time your trades']}],
             }, {
                 'shortTitle': 'News in a trading strategy',
                 'title': "Explain how clients could use news to compliment their trading strategy",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     {data: [
                         'News trading involves either buying or shorting a security immediately after a major news event.',
@@ -175,8 +175,8 @@ export default Route.extend({
             }, {
                 'shortTitle': 'Signals in a trading strategy',
                 'title': "Explain how clients could use signals to compliment their trading strategy",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [{data: [
                     'Signals are a simple "Buy" or "Sell" instruction from market analysts (IG uses Autochartist and PIA-First).',
                     'They can be used to complement a trading strategy by offloading the market research to a third party and giving you an actionable, researched stance to take on a market.'

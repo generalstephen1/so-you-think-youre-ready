@@ -162,43 +162,13 @@ export default Route.extend({
                 'approved': false,
                 'content': [
                     {
-                        data: ['Yielding params from within a component is a useful way to display the same data in a myriad of ways.']
+                        data: ['Yielding params from within a component is a useful way to enable separation of concerns within an application.']
                     },{
-                        type: 'code-snippet',
-                        data: [
-                            '//super-hero.hbs',
-                            '<h1>Greetings human, I am the almighty {{hero.title}}</h1>',
-                            '{{yield hero.title hero.superpower hero.weakness hero.isDead}}'
-                        ]
+                        title: 'Data Component',
+                        data: ['Have your component be a data component, based on a simple input it will handle requesting data and returning it via a yield']
                     },{
-                        type: 'code-snippet',
-                        data: [
-                            '//super-hero.hbs',
-                            '{{#super-hero hero=model as |title superpower weakness isDead|}}',
-                            '   {{#unless isDead}}',
-                            '       <h2>Bow before my {{superpower}}</h2>',
-                            '       <p>But please ignore my {{weakness}}</>',
-                            '   {{/unless}}',
-                            '{{/super-hero}}',
-                        ]
-                    },{
-                        type: 'code-snippet',
-                        data: [
-                            '//list-of-heroes.hbs',
-                            '{{#for heroes as |hero|}}',
-                            '   <h1> Heroes, sign off! </h1>',
-                            '   <p>',
-                            '   {{#super-hero hero=hero as |title superpower weakness isDead|}}',
-                            '       {{title}} - {{isDead}}, ',
-                            '   {{/super-hero}}',
-                            '   </p>',
-                            '{{/for}}'
-                        ]
-                    }, {
-                        data: [
-                            'In both cases we use the same component with the same information but the actual output is different depending what the parent template requires',
-                            'This makes our "super-hero" component far more composable depending on its displaying circumstances.'
-                        ]
+                        title: 'Generic state-handling component',
+                        data: ['Have your component be a simple generic component that involves state, ie a carousel or a button that has its own actions and state but these are generic enough that you can plug a bunch of data into it and it makes sense']
                     }
                 ],
             }, {

@@ -119,10 +119,10 @@ export default Route.extend({
                 'title': "Explain the benefits of using a CSS pre-processor",
                 'level': 3,
                 'approved': false,
-                'content': { data: [
+                'content': [{ data: [
                     'CSS preprocessors supercharge productivity, allow code modularity, make things far more consistant and allow your code, your files and your project be more organised.',
                     'Key points include usage of variables to allow ease of writing, updating and general modularity. Mixins which allow logic functions to be used for styles and nesting to make code nice and readable'
-                ] },
+                ] }],
             }, {
                 'shortTitle': 'BEM',
                 'title': "Demonstrate advantages of using BEM to structure CSS",
