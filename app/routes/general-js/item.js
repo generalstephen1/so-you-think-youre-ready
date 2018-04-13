@@ -201,8 +201,9 @@ export default Route.extend({
                 'shortTitle': "Traditional map, filter and reduce",
                 'title': "Demonstrate how to write map, filter and reduce using traditional loops e.g. for and while",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
+                    {data: ["Needs revisiting"]},
                     {
                         type: 'code-snippet',
                         data: [
@@ -248,8 +249,9 @@ export default Route.extend({
                 'shortTitle': "Inappropriate if else",
                 'title': "Demonstrate a scenario where an 'if else' block is inappropriate and illustrate an alternative ",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
+                    {data: ['An inappropriate if-else scenario is that of something like locales, things that should be defined before runtime and therefore should only be rendering the outcome of a config setting']},
                     {
                         type: 'code-snippet',
                         data: [
@@ -274,7 +276,7 @@ export default Route.extend({
                 'shortTitle': "Anonymous function",
                 'title': "What is an 'anonymous function'?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data: ['It is a generally inline function that is not assigned to a reference. Often used to pass into other functions as a parameter to trigger as a callback, for instance in a setTimeout you would typically use an anonymous function']}
                 ],
@@ -292,8 +294,9 @@ export default Route.extend({
                 'shortTitle': "Improper Closures",
                 'title': "Demonstrate how improper use of closures can cause memory leaks",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
+                    {data: ["Needs revisiting"]},
                     {
                         type: 'code-snippet',
                         data: [
@@ -496,7 +499,7 @@ export default Route.extend({
                 'shortTitle': "Promises",
                 'title': "Why were Promises introduced to Javascript?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data: [
                         'TL;DR - Callback Hell',
@@ -517,7 +520,7 @@ export default Route.extend({
                 'shortTitle': "Threading",
                 'title': "Why does setTimeout(fn, 0) not immediately execute?",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {
                         data: ['When you use setTimeout it immediately removes the block of code from the current processing thread. As JS is a single-threaded language it will continue with everything ' +

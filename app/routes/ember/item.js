@@ -159,7 +159,7 @@ export default Route.extend({
                 'shortTitle': 'yielding params in a component',
                 'title': "Demonstrate how yielding block params can improve the composability of a component",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {
                         data: ['Yielding params from within a component is a useful way to enable separation of concerns within an application.']
@@ -176,7 +176,27 @@ export default Route.extend({
                 'title': "List popular Ember Addons and describe their function",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [
+                    {data:['The top addons according to <a href="https://emberobserver.com/lists/top-addons" target="_blank">emberobserver.com</a>']}, {
+                        title: '#1 ember-cli-babel',
+                        data: ['By default it will take every .js file in your project and run it through the Babel transpiler to convert your ES6 code to code supported by your target browsers (as specified in config/targets.js in ember-cli >= 2.13). Running non-ES6 code through the transpiler shouldn\'t change the code at all (likely just a format change if it does).']
+                    },{
+                        title: '#2 broccoli-asset-rev ',
+                        data: ['Broccoli plugin to add fingerprint checksums to your files and update the source to reflect the new filenames.']
+                    },{
+                        title: '#3 ember-resolver',
+                        data: ['see /ember/embers-resolver']
+                    },{
+                        title: '#4 ember-cli-sass',
+                        data: ['Uses libsass to preprocess your ember-cli app\'s files and provides support for source maps and include paths']
+                    },{
+                        title: '#5 ember-qunit',
+                        data: ['ember-qunit simplifies testing of Ember applications with QUnit by providing QUnit-specific wrappers around the helpers contained in ember-test-helpers.']
+                    },{
+                        title: '#6 (because #3 is a bit cheeky) ember-inflector',
+                        data: ['Ember Inflector is a library for inflecting words between plural and singular forms.']
+                    }
+                ],
             }, {
                 'shortTitle': 'Runloop',
                 'title': "Explain the advantages of Ember's Runloop over a basic pub/sub event emitter patter",
@@ -221,7 +241,7 @@ export default Route.extend({
                 'shortTitle': 'ember-cli build pipeline',
                 'title': "Demonstrate how to leverage the ember-cli build pipeline to affect the binary output",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data:[
                         'The Ember-Cli build pipeline is handled largely by Broccoli, a fast, Rails inspired process.',
@@ -246,6 +266,7 @@ export default Route.extend({
                     }, {
                         data: [
                             'The above is the ember-cli-build.js file for this project. As you can see it includes some custom functionality for ember-cli-babel as well as an external styling library for access within the sass files.',
+                            'to make this strong, develop an ember plugin',
                         ]
                     }
                 ],

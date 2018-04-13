@@ -185,9 +185,9 @@ export default Route.extend({
                 'shortTitle': 'Economic calendar in a trading strategy',
                 'title': "Explain how clients could use an economic calendar to compliment their trading strategy",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
-                    {data: ['You can use economic calendar alerts if you think that the markets are going to respond to a particular economic event, like non-farm payrolls.']}
+                    {data: ['You can use economic calendar alerts if you think that the markets are going to respond to a particular economic event, like non-farm payrolls and companies announcing their yearly or quarterly earnings.']}
                 ],
             }, {
                 'shortTitle': 'Competitors',
@@ -199,23 +199,24 @@ export default Route.extend({
                 'shortTitle': 'Mobile vs Desktop',
                 'title': "Explain how the needs of our clients differ across mobile and desktop platforms",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [{data: [
                     'In general, mobile users spend more and make more (or lose less) than their web-based counterparts',
                     'However in terms of client needs I would argue that there is very little difference between desktop and mobile beyond the obvious ease of use over tenuous connections.',
-                    'Both platforms need to be able to react to markets and trade with ease and confidence. They both need to display data clearly and easily without clutter and they need'
+                    'Both platforms need to be able to react to markets and trade with ease and confidence. They both need to display data clearly and easily without clutter and they need',
+                    'The key difference is that a mobile user must be able to access everything they need while "on the go".'
                 ]}],
             }, {
                 'shortTitle': 'Managed vs Self-Directed trade',
                 'title': "Explain the difference between managed and self directed trading",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [{data: ['Simply put, a self-directed trade is where you invest your capital directly based on your own market research whereas a managed trade is done through a broker or portfolio and is managed by someone else (individual, bot, or a group).']}],
             }, {
                 'shortTitle': 'Share dealing vs smart portfolios',
                 'title': "Explain the difference between share dealing and smart portfolios",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data: [
                         'Share dealing is the buying and selling of shares in the hope of earning a profit.',
@@ -277,7 +278,7 @@ export default Route.extend({
                 'shortTitle': 'Rebalance',
                 'title': "Explain what a rebalance is and how often IG does it",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data: [
                         'Rebalancing is the act of looking at a portfolio and readjusting the weightings of assets',
@@ -299,7 +300,7 @@ export default Route.extend({
                 'shortTitle': 'Plot technical indicators',
                 'title': "Demonstrate how to calculate two different technical indicators and plot them on a chart",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {
                         title: 'Bollinger Bands',

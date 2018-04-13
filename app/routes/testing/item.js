@@ -22,7 +22,7 @@ export default Route.extend({
                 'shortTitle': 'Unit, Integration, Acceptance',
                 'title': "Identify scenarios appropriate for unit, integration and acceptance testing",
                 'level': 2,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {
                         title: 'Unit Tests',
