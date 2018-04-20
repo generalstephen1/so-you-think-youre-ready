@@ -345,8 +345,8 @@ export default Route.extend({
             }, {
                 'shortTitle': "Prototype",
                 'title': "Why is it a bad idea to assign objects as prototype properties?",
-                'level': 1,
-                'approved': false,
+                'level': 2,
+                'approved': true,
                 'content': [
                     { data: [
                         'The assigning of .prototype (or .__proto__ back in the day) is known as a way to significantly de-optimise your code and block code optimisation in the future.',
@@ -354,6 +354,8 @@ export default Route.extend({
                         'This causes all property lookup optimisations to be flushed and pre-compiled code discarded.',
                         'Beyond the technical fallout of assigning prototype properties there is a confusion element of this assignment, especially if a developer overwrites a prototype property and ' +
                         'functionality changes to something other developers may not expect.',
+                        'Specifically assigning an object or an array as a value is bad as it is mutable. When an object with a prototype that has an object as an attribute changes that attribute, it changes ' +
+                        'the prototypes attribute rather than itself as an instance, therefore all instances will inherit this new, mutated attribute.',
                     ] }
                 ],
             }, {
