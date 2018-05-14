@@ -54,6 +54,25 @@ body {
     }
 }
 
+.progress-bar {
+    position: relative;
+
+    &__base-bar,
+    &__completed {
+        height: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    &__base-bar {
+        background-color: red;
+    }
+    &__completed {
+        background-color: blue;
+    }
+}
+
 .point-content__title {
     margin-top: 0;
     font-size: 30px;

@@ -1,7 +1,10 @@
 <div class="mdl-layout__drawer is-visible">
     <nav class="side-bar__nav">
         <span class="side-bar__title">{{title}}</span>
-
+        {{progress-bar
+            completedPoints=completedPoints
+            totalPoints=totalPoints
+        }}
         {{#each points as |point index|}}
             {{#if point.url}}
                 <a href={{point.url}} target="_blank" class={{concat "mdl-button mdl-js-button mdl-button--primary side-bar__item side-bar__item--level-" point.level}}>

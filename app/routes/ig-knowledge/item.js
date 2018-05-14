@@ -194,7 +194,26 @@ export default Route.extend({
                 'title': "List our main competitors and describe the differences in our offering",
                 'level': 1,
                 'approved': false,
-                'content': null,
+                'content': [{
+                    type: 'list',
+                    data: [
+                        'NEX Group',
+                        'Rothschild',
+                        'AvaTrade',
+                        'Markets.com',
+                    ],
+                }, {
+                    type: 'list',
+                    title: 'Why Choose IG?',
+                    data: [
+                        '40 Years experience',
+                        'Invented Spread-bet',
+                        'More than 15,000 global financial markets',
+                        'Backed by Blackrock',
+                        'Smart portfolio',
+                        'No signup, exit or platform fees',
+                    ]
+                }],
             }, {
                 'shortTitle': 'Mobile vs Desktop',
                 'title': "Explain how the needs of our clients differ across mobile and desktop platforms",

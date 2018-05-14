@@ -51,7 +51,7 @@ export default Route.extend({
                 'shortTitle': 'Sinon DRY tests',
                 'title': "Demonstrate using Sinon to write DRY tests",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data: [
                         'DRY (don\'t repeat yourself) methodology in testing is super handy for codebase maintenance. If a method or endpoint changes and you\'ve made a stub of it for tests ' +
@@ -131,7 +131,7 @@ export default Route.extend({
                 'shortTitle': 'Assertion Library',
                 'title': "Explain the purpose of an assertion library",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {
                         data: [
@@ -145,7 +145,7 @@ export default Route.extend({
                 'shortTitle': 'Testing vs Asyc',
                 'title': "Explain how testing frameworks facilitate the testing of asynchronous code",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data:[
                         'TLDR: Mocks and Spys',

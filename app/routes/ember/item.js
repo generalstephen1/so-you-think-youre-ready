@@ -175,7 +175,7 @@ export default Route.extend({
                 'shortTitle': 'Popular Ember Addons',
                 'title': "List popular Ember Addons and describe their function",
                 'level': 1,
-                'approved': false,
+                'approved': true,
                 'content': [
                     {data:['The top addons according to <a href="https://emberobserver.com/lists/top-addons" target="_blank">emberobserver.com</a>']}, {
                         title: '#1 ember-cli-babel',

@@ -21,11 +21,12 @@ export function slugComparison(curData, slug) {
   if (activeNavItem) {
       activeNavItem.classes = ('mdl-tabs__tab mdl-tabs__tab--active')
   }
-
   return {
       data: curData.points,
       activeContent,
       navData:rawNavData,
+      completedPoints: curData.completedPoints,
+      totalPoints: curData.totalPoints,
   }
 }
 
